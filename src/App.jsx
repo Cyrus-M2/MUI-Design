@@ -1,4 +1,6 @@
-import { Typography } from "@mui/material"
+import MuiButton from "./Muibutton"
+
+import { Button, Typography } from "@mui/material"
 import './App.css'
 
 function App() {
@@ -41,8 +43,9 @@ function App() {
       </Typography>
       <Typography variant="body1">The world is an awesome place to be.</Typography>
     </div>
-    </div>
+       <MuiButton />
 
+    </div>
     
   )
 }
