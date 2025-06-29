@@ -1,5 +1,5 @@
 import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
-  Radio, FormControlLabel, RadioGroup } from '@mui/material'; 
+  Radio, FormControlLabel, RadioGroup, Checkbox, Switch } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -94,11 +94,33 @@ const Muibutton = () => {
 
     {/* Radio Button﻿ */}
     <Stack direction="row" spacing={2}>
-      <RadioGroup>
+      <RadioGroup value='female'>
         <FormControlLabel value="male" control={<Radio />} label="Male" />
         <FormControlLabel value="female" control={<Radio />} label="Female" />
       </RadioGroup>
     </Stack>
+
+    {/* Checkbox﻿ */}
+    <Stack direction="row" spacing={2}>
+      <FormControlLabel
+        label="I agree to terms and conditions"
+        control={<Checkbox />}
+      />
+    </Stack>
+
+    {/* Switch */}
+    <Stack direction="row" spacing={2}>
+      <FormControlLabel
+        label="Dark Mode"
+        control={<Switch />}
+      />
+    </Stack>
+
+    {/* Box﻿ */}
+    <Box>
+      <Typography variant="h4">Hello, World</Typography>
+    </Box>
+    
     </Stack>
     
   )
