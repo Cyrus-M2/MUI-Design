@@ -1,4 +1,5 @@
-import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment } from '@mui/material'; 
+import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
+  Radio, FormControlLabel, RadioGroup } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -89,6 +90,14 @@ const Muibutton = () => {
           },
         }}
       />
+    </Stack>
+
+    {/* Radio Button﻿ */}
+    <Stack direction="row" spacing={2}>
+      <RadioGroup>
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+      </RadioGroup>
     </Stack>
     </Stack>
     
