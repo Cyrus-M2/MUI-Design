@@ -1,4 +1,4 @@
-import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton } from '@mui/material'; 
+import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -57,11 +57,16 @@ const Muibutton = () => {
         </Stack>
 
     {/* Toggle Button﻿ */}
-    <ToggleButtonGroup>
+    <ToggleButtonGroup value={["bold", "underline"]}>
       <ToggleButton value="bold">Bold</ToggleButton>
       <ToggleButton value="italic">Italic</ToggleButton>
       <ToggleButton value="underline">Underline</ToggleButton>
     </ToggleButtonGroup>
+
+    {/* Text Field */}
+    <Stack>
+      <TextField label="first name" type="text" />
+    </Stack>
     </Stack>
     
   )
