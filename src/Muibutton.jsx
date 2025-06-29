@@ -1,5 +1,5 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
-  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box } from '@mui/material'; 
+  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -142,7 +142,7 @@ const Muibutton = () => {
     </Box>
 
     {/* Stack */}
-    <Stack>
+    <Stack direction='row' spacing={3}>
       <Box width="100px" height="100px" bgcolor="primary.main">
         <Typography variant="h4">Hello, World</Typography>
       </Box>
@@ -153,6 +153,25 @@ const Muibutton = () => {
         <Typography variant="h4">Hello, World</Typography>
       </Box>
     </Stack>
+
+  {/* Grid */}
+<Grid container spacing={3}>
+      <Grid size={4}>
+        <Box bgcolor="primary.main" p={2}>
+          <Typography variant="h4">Box 1</Typography>
+        </Box>
+      </Grid>
+      <Grid size={4}>
+        <Box bgcolor="primary.main" p={2}>
+          <Typography variant="h4">Box 2</Typography>
+        </Box>
+      </Grid>
+      <Grid size={4}>
+        <Box bgcolor="primary.main" p={2}>
+          <Typography variant="h4">Box 3</Typography>
+        </Box>
+      </Grid>
+  </Grid>
 
     </Stack>
     
