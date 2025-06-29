@@ -156,17 +156,17 @@ const Muibutton = () => {
 
   {/* Grid */}
 <Grid container spacing={3}>
-      <Grid size={4}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4}}>
         <Box bgcolor="primary.main" p={2}>
           <Typography variant="h4">Box 1</Typography>
         </Box>
       </Grid>
-      <Grid size={4}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4}}>
         <Box bgcolor="primary.main" p={2}>
           <Typography variant="h4">Box 2</Typography>
         </Box>
       </Grid>
-      <Grid size={4}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4}}>
         <Box bgcolor="primary.main" p={2}>
           <Typography variant="h4">Box 3</Typography>
         </Box>
