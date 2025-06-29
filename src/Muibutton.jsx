@@ -1,4 +1,4 @@
-import { Button, Stack, IconButton } from '@mui/material'; 
+import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -46,6 +46,22 @@ const Muibutton = () => {
         <FaUserPlus />
       </IconButton>
     </Stack>
+
+    {/* GroupButton */}
+        <Stack direction="row" display="block" spacing={4}>
+            <ButtonGroup orientation='vertical'>
+              <Button>Left</Button>
+              <Button>Center</Button>
+              <Button>Right</Button>
+            </ButtonGroup>
+        </Stack>
+
+    {/* Toggle Button﻿ */}
+    <ToggleButtonGroup>
+      <ToggleButton value="bold">Bold</ToggleButton>
+      <ToggleButton value="italic">Italic</ToggleButton>
+      <ToggleButton value="underline">Underline</ToggleButton>
+    </ToggleButtonGroup>
     </Stack>
     
   )
