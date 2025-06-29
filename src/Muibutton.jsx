@@ -1,4 +1,4 @@
-import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField } from '@mui/material'; 
+import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -66,6 +66,29 @@ const Muibutton = () => {
     {/* Text Field */}
     <Stack>
       <TextField label="first name" type="text" />
+    </Stack>
+
+    {/* Changing the variant﻿ */}
+    <Stack>
+      <TextField label="first name" type="text" variant="standard" />
+      <TextField label="middle name" type="text" variant="outlined" />
+      <TextField label="last name" type="text" variant="filled" />
+    </Stack>
+
+    {/* Input Adornments﻿ */}
+    <Stack direction="row" spacing={2}>
+      <TextField
+        label="Your Weight"
+        type="number"
+        variant="outlined"
+        slotProps={{
+          input: {
+            startAdornment: (
+              <InputAdornment position="start">Kg</InputAdornment>
+            ),
+          },
+        }}
+      />
     </Stack>
     </Stack>
     
