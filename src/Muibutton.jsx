@@ -120,11 +120,39 @@ const Muibutton = () => {
     <Box>
       <Typography variant="h4">Hello, World</Typography>
     </Box>
-    
+
 {/* Changing the underlying HTML element via component prop */}
     <Box component="section">
       <Typography variant="h4">Hello, World</Typography>
     </Box>
+{/* The sx prop﻿ */}
+    <Box
+      component="section"
+      sx={{
+        backgroundColor: "primary.main",
+        color: "white",
+        height: "100px",
+        width: "100px",
+        "&:hover": {
+          backgroundColor: "primary.light",
+        },
+      }}
+    >
+      <Typography variant="h4">Hello, World</Typography>
+    </Box>
+
+    {/* Stack */}
+    <Stack>
+      <Box width="100px" height="100px" bgcolor="primary.main">
+        <Typography variant="h4">Hello, World</Typography>
+      </Box>
+      <Box width="100px" height="100px" bgcolor="primary.main">
+        <Typography variant="h4">Hello, World</Typography>
+      </Box>
+      <Box width="100px" height="100px" bgcolor="primary.main">
+        <Typography variant="h4">Hello, World</Typography>
+      </Box>
+    </Stack>
 
     </Stack>
     
