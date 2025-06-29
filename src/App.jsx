@@ -16,6 +16,18 @@ function App() {
     {/* subtitles */}
       <Typography variant="subtitle1">Subtitle 1</Typography>
       <Typography variant="subtitle2">Subtitle 2</Typography>
+
+    {/* Body Text */}
+    <div>
+      <Typography variant="body1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio incidunt
+        dolore sint placeat hic repellendus odit corporis aut quis ut.
+      </Typography>
+      <Typography variant="body2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eveniet
+        sunt maiores eius expedita pariatur magnam minus alias velit nulla?
+      </Typography>
+    </div>
     </div>
 
     
