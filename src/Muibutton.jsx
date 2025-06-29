@@ -1,5 +1,5 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
-  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions } from '@mui/material'; 
+  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -180,6 +180,7 @@ const Muibutton = () => {
 
 {/* Card */}
     <Card sx={{ width: "300px" }}>
+            <CardMedia component="img" height="200px" image="/img.jpg" />
       <CardContent>
         <Typography variant="h5">Title</Typography>
         <Typography variant="body1">
