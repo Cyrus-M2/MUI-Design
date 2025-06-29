@@ -1,6 +1,8 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
-  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia } from '@mui/material'; 
+  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
+Accordion, AccordionSummary, AccordionDetails } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa6";
 
 const Muibutton = () => {
   return (
@@ -196,6 +198,18 @@ const Muibutton = () => {
         <Button size="small">Share</Button>
       </CardActions>
     </Card>
+
+{/* Accordion */}
+  <Accordion>
+      <AccordionSummary expandIcon={<FaChevronDown />}>
+        <Typography variant="h5">What is React?</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography variant="body2">
+            React is an extremely popular declarative library for building user interfaces
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
 
     </Stack>
     
