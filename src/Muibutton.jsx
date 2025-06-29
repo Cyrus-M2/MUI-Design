@@ -1,5 +1,5 @@
-import { Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
-  Radio, FormControlLabel, RadioGroup, Checkbox, Switch } from '@mui/material'; 
+import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
+  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -121,6 +121,11 @@ const Muibutton = () => {
       <Typography variant="h4">Hello, World</Typography>
     </Box>
     
+{/* Changing the underlying HTML element via component prop */}
+    <Box component="section">
+      <Typography variant="h4">Hello, World</Typography>
+    </Box>
+
     </Stack>
     
   )
