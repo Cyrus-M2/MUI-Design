@@ -28,6 +28,19 @@ function App() {
         sunt maiores eius expedita pariatur magnam minus alias velit nulla?
       </Typography>
     </div>
+
+    {/* changing underlying sematic Element */}
+    <div>
+      <Typography variant="h4" component="h1">Hello, World</Typography>
+    </div>
+
+    {/* Putting Some Margin to the bottom of our text */}
+    <div>
+     <Typography variant="h4" component="h1" gutterBottom>
+        Hello, World
+      </Typography>
+      <Typography variant="body1">The world is an awesome place to be.</Typography>
+    </div>
     </div>
 
     
