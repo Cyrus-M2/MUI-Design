@@ -1,5 +1,5 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
-  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent } from '@mui/material'; 
+  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 
 const Muibutton = () => {
@@ -188,6 +188,12 @@ const Muibutton = () => {
           similique repellat delectus.
         </Typography>
       </CardContent>
+      <CardActions>
+        <Button size="small" variant="contained">
+          Like
+        </Button>
+        <Button size="small">Share</Button>
+      </CardActions>
     </Card>
 
     </Stack>
