@@ -2,7 +2,7 @@ import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, 
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
 Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, Tooltip, Alert, AlertTitle,
 AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, Chip,
-Snackbar,   Dialog,
+Snackbar,   Dialog, LinearProgress, CircularProgress,
   DialogTitle,
   DialogContent,
   DialogActions } from '@mui/material'; 
@@ -488,6 +488,28 @@ const Muibutton = () => {
         </DialogActions>
       </Dialog>
     </>
+
+{/* Basic Usage for Both LinearProgress and CircularProgress﻿     */}
+    <Stack spacing={2}>
+      <LinearProgress />
+      <CircularProgress />
+    </Stack>
+    <Stack spacing={2}>
+      <LinearProgress variant="determinate" value={70} />
+      <CircularProgress variant="determinate" value={60} />
+    </Stack>
+    <Stack spacing={2}>
+      <LinearProgress
+        sx={{
+          height: 10,
+          borderRadius: 5,
+          bgcolor: "#eee",
+          color: "primary.main",
+        }}
+      />
+      <CircularProgress size={150} thickness={10} />
+    </Stack>
+
     </Stack>
     
   )
