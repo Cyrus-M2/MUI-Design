@@ -2,7 +2,10 @@ import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, 
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
 Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, Tooltip, Alert, AlertTitle,
 AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, Chip,
-Snackbar } from '@mui/material'; 
+Snackbar,   Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
@@ -449,6 +452,39 @@ const Muibutton = () => {
       />
     </Stack>
 
+{/* Dialog */}
+<>
+      <Button onClick={() => setOpen(true)} variant="outlined" color="error">
+        Delete Repository
+      </Button>
+      <Dialog open={open}>
+        <DialogTitle>
+          Are you sure you want to delete this repository?
+        </DialogTitle>
+        <DialogContent>
+          <Typography variant="body1">
+            This action is irreversible. You will lose all the stars, forks and
+            all the project history. This action cannot be undone and we might
+            not be able to help you.
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              console.log("confirmed");
+              setOpen(false);
+            }}
+          >
+            Yes, I want to delete this repository
+          </Button>
+          <Button variant="outlined" onClick={() => setOpen(false)}>
+            Cancel
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
     </Stack>
     
   )
