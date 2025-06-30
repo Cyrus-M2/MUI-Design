@@ -1,6 +1,6 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
-Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, Tooltip,
+Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, Tooltip, Alert, AlertTitle,
 AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, Chip } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
@@ -8,6 +8,7 @@ import { FaUsersViewfinder } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
 // import { IoMail } from "react-icons/io5";
+import { BiXCircle } from "react-icons/bi";
 import { useState } from "react";
 
 
@@ -405,6 +406,39 @@ const Muibutton = () => {
         <Button variant="contained">Delete</Button>
       </Tooltip>
     </Stack>
+{/* Alert﻿ */}
+    <Stack direction="column" spacing={2}>
+      <Alert severity="success">This is a success alert</Alert>
+      <Alert severity="warning">This is a warning alert</Alert>
+      <Alert severity="error">This is a error alert</Alert>
+      <Alert severity="info">This is a info alert</Alert>
+    </Stack>
+    <Stack direction="column" spacing={2}>
+      <Alert severity="error" variant="filled">
+        <AlertTitle>Error fetching data</AlertTitle>
+        This could mean you are not logged in or you have no
+        internet connection. Please try to fix this issues then
+        try again.
+      </Alert>
+    </Stack>
+    <Stack direction="column" spacing={2}>
+      <Alert severity="error" variant="filled" icon={<BiXCircle />}>
+        <AlertTitle>Error fetching data</AlertTitle>
+        This could mean you are not logged in or you have no internet
+        connection. Please try to fix this issues then try again.
+      </Alert>
+    </Stack>
+    <Stack direction="column" spacing={2}>
+      <Alert
+        severity="success"
+        variant="filled"
+        icon={<BiXCircle />}
+        action={<Button variant="contained" color="success">Undo</Button>} >
+        <AlertTitle>Success</AlertTitle>
+        Account ha been deleted successfully
+      </Alert>
+    </Stack>
+
 
     </Stack>
     
