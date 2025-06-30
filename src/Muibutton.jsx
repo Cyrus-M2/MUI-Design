@@ -1,19 +1,16 @@
-import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
-  Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
+import { 
+Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
+Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
 Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, Tooltip, Alert, AlertTitle,
 AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, Chip,
-Snackbar,   Dialog, LinearProgress, CircularProgress,
-  DialogTitle,
-  DialogContent,
-  DialogActions,  createTheme,
-  colors,
+Snackbar,   Dialog, LinearProgress, CircularProgress, DialogTitle, DialogContent, DialogActions,  createTheme, colors,
   ThemeProvider } from '@mui/material'; 
+
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
-// import { IoMail } from "react-icons/io5";
 import { BiXCircle } from "react-icons/bi";
 import { useState } from "react";
 
@@ -29,7 +26,7 @@ const theme = createTheme({
 
 const Muibutton = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
 
   return (
@@ -39,11 +36,13 @@ const Muibutton = () => {
       <Button variant="text">Text</Button>
 
     {/* The href prop to convert a button to a link﻿ */}
+
       <Button variant="text" href="https://www.google.com">
       Visit Google
     </Button>
 
     {/* Button Colors﻿ */}
+
     <Stack direction="column" spacing={4}>
       <Button variant="contained" color="primary">Primary</Button>
       <Button variant="contained" color="secondary">Secondary</Button>
@@ -54,6 +53,7 @@ const Muibutton = () => {
     </Stack>
 
     {/* Button size﻿ */}
+
     <Stack direction="column" display="block" spacing={4}>
       <Button variant="contained" size="small">Small</Button>
       <Button variant="contained" size="medium">Medium</Button>
@@ -61,6 +61,7 @@ const Muibutton = () => {
     </Stack>
 
     {/* Placing Icon In Button﻿ */}
+
     <Stack direction="row" display="block" spacing={4}>
             <Button variant="contained" size="large" startIcon={<FaUserPlus />}>
                 Add User
@@ -71,6 +72,7 @@ const Muibutton = () => {
     </Stack>
 
     {/* IconButton﻿ */}
+
     <Stack direction="row" display="block" spacing={4}>
       <IconButton color="success" size="large">
         <FaUserPlus />
@@ -78,6 +80,7 @@ const Muibutton = () => {
     </Stack>
 
     {/* GroupButton */}
+
         <Stack direction="row" display="block" spacing={4}>
             <ButtonGroup orientation='vertical'>
               <Button>Left</Button>
@@ -87,6 +90,7 @@ const Muibutton = () => {
         </Stack>
 
     {/* Toggle Button﻿ */}
+
     <ToggleButtonGroup value={["bold", "underline"]}>
       <ToggleButton value="bold">Bold</ToggleButton>
       <ToggleButton value="italic">Italic</ToggleButton>
@@ -94,11 +98,13 @@ const Muibutton = () => {
     </ToggleButtonGroup>
 
     {/* Text Field */}
+
     <Stack>
       <TextField label="first name" type="text" />
     </Stack>
 
     {/* Changing the variant﻿ */}
+
     <Stack>
       <TextField label="first name" type="text" variant="standard" />
       <TextField label="middle name" type="text" variant="outlined" />
@@ -106,6 +112,7 @@ const Muibutton = () => {
     </Stack>
 
     {/* Input Adornments﻿ */}
+
     <Stack direction="row" spacing={2}>
       <TextField
         label="Your Weight"
@@ -122,6 +129,7 @@ const Muibutton = () => {
     </Stack>
 
     {/* Radio Button﻿ */}
+
     <Stack direction="row" spacing={2}>
       <RadioGroup value='female'>
         <FormControlLabel value="male" control={<Radio />} label="Male" />
@@ -130,6 +138,7 @@ const Muibutton = () => {
     </Stack>
 
     {/* Checkbox﻿ */}
+
     <Stack direction="row" spacing={2}>
       <FormControlLabel
         label="I agree to terms and conditions"
@@ -138,6 +147,7 @@ const Muibutton = () => {
     </Stack>
 
     {/* Switch */}
+
     <Stack direction="row" spacing={2}>
       <FormControlLabel
         label="Dark Mode"
@@ -146,15 +156,19 @@ const Muibutton = () => {
     </Stack>
 
     {/* Box﻿ */}
+
     <Box>
       <Typography variant="h4">Hello, World</Typography>
     </Box>
 
 {/* Changing the underlying HTML element via component prop */}
+
     <Box component="section">
       <Typography variant="h4">Hello, World</Typography>
     </Box>
+
 {/* The sx prop﻿ */}
+
     <Box
       component="section"
       sx={{
@@ -171,6 +185,7 @@ const Muibutton = () => {
     </Box>
 
     {/* Stack */}
+
     <Stack direction='row' spacing={3}>
       <Box width="100px" height="100px" bgcolor="primary.main">
         <Typography variant="h4">Hello, World</Typography>
@@ -184,6 +199,7 @@ const Muibutton = () => {
     </Stack>
 
   {/* Grid */}
+
 <Grid container spacing={3}>
       <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4}}>
         <Box bgcolor="primary.main" p={2}>
@@ -203,11 +219,13 @@ const Muibutton = () => {
   </Grid>
 
   {/* Paper, elevation */}
+
     <Paper sx={{ p: 5 }} elevation={24} variant="outlined">
       <Typography variant="h5">Hello, world</Typography>
     </Paper>
 
 {/* Card */}
+
     <Card sx={{ width: "300px" }}>
             <CardMedia component="img" height="200px" image="/img.jpg" />
       <CardContent>
@@ -227,6 +245,7 @@ const Muibutton = () => {
     </Card>
 
 {/* Accordion */}
+
   <Accordion>
       <AccordionSummary expandIcon={<FaChevronDown />}>
         <Typography variant="h5">What is React?</Typography>
@@ -270,6 +289,7 @@ const Muibutton = () => {
     </AppBar>
 
   {/* Link﻿ */}
+
   <Stack direction="row" spacing={2}>
       <Link
         href="https://github.com"
@@ -290,6 +310,7 @@ const Muibutton = () => {
     </Stack>
 
 {/* Drawer */}
+
       <IconButton onClick={(_e) => setDrawerOpen(true)}>
         <IoMdMenu />
       </IconButton>
@@ -304,6 +325,7 @@ const Muibutton = () => {
       </Drawer>
 
 {/* Avatar﻿ */}
+
     <Stack direction="row" spacing={2}>
     <AvatarGroup>
       <Avatar sx={{ backgroundColor: "primary.main" }}>DO</Avatar>
@@ -322,6 +344,7 @@ const Muibutton = () => {
     </Stack>
     
   {/* Badge */}
+
     <Stack direction="row" spacing={2}>
       <Badge badgeContent={5} color="primary">
         <IoMail />
@@ -329,6 +352,7 @@ const Muibutton = () => {
     </Stack>
 
 {/* Lists﻿  */}
+
 <List>
       <ListItem>
         <ListItemIcon>
@@ -351,6 +375,7 @@ const Muibutton = () => {
     </List>
 
 {/* Adding an Avatar to list */}
+
 <List>
       <ListItem>
         <ListItemAvatar>
@@ -379,6 +404,7 @@ const Muibutton = () => {
   </List>
 
 {/* Chip - usage */}
+
     <Stack direction="row" spacing={2}>
       <Chip label="Backend" color="secondary" size="medium" />
       <Chip label="Databases" color="secondary" size="medium" />
@@ -408,6 +434,8 @@ const Muibutton = () => {
     </Stack>
 
 {/* Tooltip﻿ */}
+
+
     <Stack direction="row" spacing={2}>
       <Tooltip title="Delete all posts. This action is irreversible">
         <Button variant="contained">Delete</Button>
@@ -424,7 +452,9 @@ const Muibutton = () => {
         <Button variant="contained">Delete</Button>
       </Tooltip>
     </Stack>
+
 {/* Alert﻿ */}
+
     <Stack direction="column" spacing={2}>
       <Alert severity="success">This is a success alert</Alert>
       <Alert severity="warning">This is a warning alert</Alert>
@@ -458,6 +488,7 @@ const Muibutton = () => {
     </Stack>
 
 {/* Snackbar﻿ */}
+
     <Stack direction="column" spacing={2}>
       <Snackbar
         open={true}
@@ -467,6 +498,7 @@ const Muibutton = () => {
     </Stack>
 
 {/* Dialog */}
+
 <>
       <Button onClick={() => setOpen(true)} variant="outlined" color="error">
         Delete Repository
@@ -501,6 +533,7 @@ const Muibutton = () => {
     </>
 
 {/* Basic Usage for Both LinearProgress and CircularProgress﻿     */}
+
     <Stack spacing={2}>
       <LinearProgress />
       <CircularProgress />
@@ -522,6 +555,7 @@ const Muibutton = () => {
     </Stack>
 
 {/* Responsiveness */}
+
 <Grid container spacing={2}>
       <Grid size={{ xs: 12, sm: 6, md: 4 }}>
         <Paper sx={{ p: 8, bgcolor: "primary.main" }}>Item 1</Paper>
@@ -535,6 +569,7 @@ const Muibutton = () => {
 </Grid>
 
 {/* Customizing The Theme */}
+
     <ThemeProvider theme={theme}>
       <Box>
         <Typography variant="h3">hello mui</Typography>
