@@ -283,8 +283,8 @@ const Muibutton = () => {
 
 {/* Avatar﻿ */}
     <Stack direction="row" spacing={2}>
-      <Avatar>DO</Avatar>
-      <Avatar>JD</Avatar>
+      <Avatar sx={{ backgroundColor: "primary.main" }}>DO</Avatar>
+      <Avatar sx={{ backgroundColor: "primary.main" }}>JD</Avatar>
     </Stack>
 
     </Stack>
