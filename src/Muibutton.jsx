@@ -5,7 +5,9 @@ AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, 
 Snackbar,   Dialog, LinearProgress, CircularProgress,
   DialogTitle,
   DialogContent,
-  DialogActions } from '@mui/material'; 
+  DialogActions,  createTheme,
+  colors,
+  ThemeProvider } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
@@ -14,6 +16,15 @@ import { IoMail } from "react-icons/io5";
 // import { IoMail } from "react-icons/io5";
 import { BiXCircle } from "react-icons/bi";
 import { useState } from "react";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: colors.lime[500],
+      contrastText: "#fff",
+    },
+  },
+});
 
 
 const Muibutton = () => {
@@ -522,6 +533,14 @@ const Muibutton = () => {
         <Paper sx={{ p: 8, bgcolor: "primary.main" }}>Item 3</Paper>
       </Grid>
 </Grid>
+
+{/* Customizing The Theme */}
+    <ThemeProvider theme={theme}>
+      <Box>
+        <Typography variant="h3">hello mui</Typography>
+        <Button variant="contained">Click Me</Button>
+      </Box>
+    </ThemeProvider>
 
     </Stack>
     
