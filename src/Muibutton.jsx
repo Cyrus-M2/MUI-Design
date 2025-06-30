@@ -1,10 +1,12 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
-Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar } from '@mui/material'; 
+Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, 
+AvatarGroup, Badge, List, ListItem, ListItemText} from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
+import { IoMail } from "react-icons/io5";
 import { useState } from "react";
 
 
@@ -283,9 +285,41 @@ const Muibutton = () => {
 
 {/* Avatar﻿ */}
     <Stack direction="row" spacing={2}>
+    <AvatarGroup>
       <Avatar sx={{ backgroundColor: "primary.main" }}>DO</Avatar>
       <Avatar sx={{ backgroundColor: "primary.main" }}>JD</Avatar>
+
+      <Avatar
+        src="https://www.randomuser.me/api/portraits/women/80.jpg"
+        alt="jane doe"
+      />
+      <Avatar
+        src="https://www.randomuser.me/api/portraits/men/81.jpg"
+        alt="john doe"
+      />
+
+      </AvatarGroup>
     </Stack>
+    
+  {/* Badge */}
+    <Stack direction="row" spacing={2}>
+      <Badge badgeContent={5} color="primary">
+        <IoMail />
+      </Badge>
+    </Stack>
+
+{/* Lists﻿  */}
+    <List>
+      <ListItem>
+        <ListItemText primary="Item 1" />
+      </ListItem>
+      <ListItem>
+        <ListItemText primary="Item 2" />
+      </ListItem>
+      <ListItem>
+        <ListItemText primary="Item 3" />
+      </ListItem>
+    </List>
 
     </Stack>
     
