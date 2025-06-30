@@ -1,7 +1,8 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
 Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, Tooltip, Alert, AlertTitle,
-AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, Chip } from '@mui/material'; 
+AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, Chip,
+Snackbar } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
@@ -439,6 +440,14 @@ const Muibutton = () => {
       </Alert>
     </Stack>
 
+{/* Snackbar﻿ */}
+    <Stack direction="column" spacing={2}>
+      <Snackbar
+        open={true}
+        message="Article created successfully"
+        autoHideDuration={2000}
+      />
+    </Stack>
 
     </Stack>
     
