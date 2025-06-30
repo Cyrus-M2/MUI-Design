@@ -510,6 +510,19 @@ const Muibutton = () => {
       <CircularProgress size={150} thickness={10} />
     </Stack>
 
+{/* Responsiveness */}
+<Grid container spacing={2}>
+      <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Paper sx={{ p: 8, bgcolor: "primary.main" }}>Item 1</Paper>
+      </Grid>
+      <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Paper sx={{ p: 8, bgcolor: "primary.main" }}>Item 2</Paper>
+      </Grid>
+      <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Paper sx={{ p: 8, bgcolor: "primary.main" }}>Item 3</Paper>
+      </Grid>
+</Grid>
+
     </Stack>
     
   )
