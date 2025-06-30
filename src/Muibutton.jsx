@@ -1,6 +1,6 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
-Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer } from '@mui/material'; 
+Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
@@ -280,6 +280,13 @@ const Muibutton = () => {
           <Typography variant="h6">Side Panel</Typography>
         </Box>
       </Drawer>
+
+{/* Avatar﻿ */}
+    <Stack direction="row" spacing={2}>
+      <Avatar>DO</Avatar>
+      <Avatar>JD</Avatar>
+    </Stack>
+
     </Stack>
     
   )
