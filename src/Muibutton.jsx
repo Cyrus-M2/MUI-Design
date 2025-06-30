@@ -1,13 +1,13 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
 Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, 
-AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon} from '@mui/material'; 
+AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
 import { IoMdMenu } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
-import { IoMail } from "react-icons/io5";
+// import { IoMail } from "react-icons/io5";
 import { useState } from "react";
 
 
@@ -310,7 +310,7 @@ const Muibutton = () => {
     </Stack>
 
 {/* Lists﻿  */}
-    <List>
+<List>
       <ListItem>
         <ListItemIcon>
           <IoMail />
@@ -330,6 +330,34 @@ const Muibutton = () => {
         <ListItemText primary="Item 3" />
       </ListItem>
     </List>
+
+{/* Adding an Avatar to list */}
+<List>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <IoMail />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Item 1" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <IoMail />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Item 2" />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <IoMail />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Item 3" />
+      </ListItem>
+  </List>
 
     </Stack>
     
