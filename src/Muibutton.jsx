@@ -1,8 +1,9 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
-Accordion, AccordionSummary, AccordionDetails } from '@mui/material'; 
+Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
+import { FaUsersViewfinder } from "react-icons/fa6";
 
 const Muibutton = () => {
   return (
@@ -210,6 +211,57 @@ const Muibutton = () => {
         </Typography>
       </AccordionDetails>
     </Accordion>
+
+{/* Navigation Bar */}
+<AppBar position="static">
+      <Toolbar>
+        <IconButton size="large" edge="start" color="inherit">
+          <FaUsersViewfinder />
+        </IconButton>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          Awesome App
+        </Typography>
+
+        {/* NavLinks */}
+        <Stack direction="row" spacing={2}>
+          <Button color="inherit" href="https://github.com">
+            Home
+          </Button>
+          <Button color="inherit" href="https://github.com">
+            Features
+          </Button>
+          <Button color="inherit" href="https://github.com">
+            About
+          </Button>
+          <Button color="inherit" href="https://github.com">
+            Login
+          </Button>
+          <Button color="inherit" href="https://github.com">
+            Sign Up
+          </Button>
+        </Stack>
+      </Toolbar>
+    </AppBar>
+
+  {/* Link﻿ */}
+  <Stack direction="row" spacing={2}>
+      <Link
+        href="https://github.com"
+        color="primary"
+        underline="hover"
+        variant="body1"
+      >
+        Open Github
+      </Link>
+      <Link
+        href="https://github.com"
+        color="secondary"
+        underline="hover"
+        variant="body1"
+      >
+        Open Github
+      </Link>
+    </Stack>
 
     </Stack>
     
