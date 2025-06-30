@@ -1,6 +1,6 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
-Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, 
+Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, Tooltip,
 AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, Chip } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
@@ -386,6 +386,24 @@ const Muibutton = () => {
         avatar={<Avatar>F</Avatar>}
       />
 
+    </Stack>
+
+{/* Tooltip﻿ */}
+    <Stack direction="row" spacing={2}>
+      <Tooltip title="Delete all posts. This action is irreversible">
+        <Button variant="contained">Delete</Button>
+      </Tooltip>
+    </Stack>
+    <Stack direction="row" spacing={2}>
+      <Tooltip
+        title="Delete all posts. This action is irreversible"
+        placement="left"
+        arrow
+        enterDelay={500}
+        leaveDelay={1000}
+      >
+        <Button variant="contained">Delete</Button>
+      </Tooltip>
     </Stack>
 
     </Stack>
