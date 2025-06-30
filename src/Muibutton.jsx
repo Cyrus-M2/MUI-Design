@@ -1,7 +1,7 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
 Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer, Avatar, 
-AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar } from '@mui/material'; 
+AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, Chip } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
@@ -358,6 +358,21 @@ const Muibutton = () => {
         <ListItemText primary="Item 3" />
       </ListItem>
   </List>
+
+{/* Chip - usage */}
+    <Stack direction="row" spacing={2}>
+      <Chip label="Backend" color="secondary" size="medium" />
+      <Chip label="Databases" color="secondary" size="medium" />
+      <Chip label="Deployment" color="secondary" size="medium" />
+      <Chip label="Web security" color="secondary" size="medium" />
+      <Chip
+        label="Frontend"
+        color="secondary"
+        size="medium"
+        variant="outlined"
+      />
+
+    </Stack>
 
     </Stack>
     
