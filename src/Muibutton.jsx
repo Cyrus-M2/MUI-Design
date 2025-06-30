@@ -371,6 +371,20 @@ const Muibutton = () => {
         size="medium"
         variant="outlined"
       />
+      <Chip
+        label="Mails"
+        color="secondary"
+        size="medium"
+        variant="outlined"
+        icon={<IoMail />}
+      />
+      <Chip
+        label="Frontend"
+        color="secondary"
+        size="medium"
+        variant="outlined"
+        avatar={<Avatar>F</Avatar>}
+      />
 
     </Stack>
 
