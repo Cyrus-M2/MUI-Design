@@ -1,11 +1,15 @@
 import { Typography, Button, Stack, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton, TextField, InputAdornment,
   Radio, FormControlLabel, RadioGroup, Checkbox, Switch, Box, Grid, Paper, Card, CardContent, CardActions, CardMedia,
-Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link } from '@mui/material'; 
+Accordion, AccordionSummary, AccordionDetails, AppBar, Toolbar, Link, Drawer } from '@mui/material'; 
 import { FaUserPlus } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaUsersViewfinder } from "react-icons/fa6";
+import { IoMdMenu } from "react-icons/io";
+import { useState } from "react";
+
 
 const Muibutton = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
   return (
     <Stack direction="column" spacing={4} >
       <Button variant="contained">Contained</Button>
@@ -263,6 +267,19 @@ const Muibutton = () => {
       </Link>
     </Stack>
 
+{/* Drawer */}
+      <IconButton onClick={(_e) => setDrawerOpen(true)}>
+        <IoMdMenu />
+      </IconButton>
+      <Drawer
+        anchor="left"
+        open={drawerOpen}
+        onClose={(_e) => setDrawerOpen(false)}
+      >
+        <Box width="300px" p={3}>
+          <Typography variant="h6">Side Panel</Typography>
+        </Box>
+      </Drawer>
     </Stack>
     
   )
